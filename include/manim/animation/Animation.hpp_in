@@ -1,0 +1,11 @@
+{% extends "CHeader.hpp" %}
+{% block header %}
+{% endblock %}
+{% block body %}
+class Animation
+{
+	public:
+		Animation();
+		virtual ~Animation() = default;
+};
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "CHeader.hpp" %}
+{% block header %}
+#include <manim/mobject/Mobject.hpp> // esolv/anim/mobject/Mobject.hpp_in
+{% endblock %}
+{% block body %}
+class TexMobject: virtual public Mobject
+{
+	public:
+		virtual ~TexMobject() = default;
+};
+{% endblock %}

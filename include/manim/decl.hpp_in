@@ -1,0 +1,39 @@
+{{ include_block_open }}
+
+#include <set>
+#include <vector>
+#include <memory>
+
+namespace manim
+{
+	class _Factory;
+	class Factory;
+
+	namespace mobject
+	{
+		class Mobject;
+		class TexMobject;
+
+		typedef std::shared_ptr<Mobject> S_Mobject;
+		typedef std::shared_ptr<TexMobject> S_TexMobject;
+
+		typedef std::shared_ptr<S_Mobject> SS_Mobject;
+	}
+	namespace animation
+	{
+		class Animation;
+		class Transform;
+		class TransformCopy;
+		class Write;
+		class Uncreate;
+
+		typedef std::shared_ptr<Animation> S_Animation;
+		typedef std::shared_ptr<Transform> S_Transform;
+		typedef std::shared_ptr<TransformCopy> S_TransformCopy;
+		typedef std::shared_ptr<Write> S_Write;
+		typedef std::shared_ptr<Uncreate> S_Uncreate;
+	}
+}
+
+{{ include_block_close }}
+

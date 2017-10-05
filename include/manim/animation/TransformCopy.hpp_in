@@ -1,0 +1,15 @@
+{% extends "CHeader.hpp" %}
+{% block header %}
+#include <manim/decl.hpp>
+#include <manim/animation/Animation.hpp> // esolv/anim/animation/Animation.hpp_in
+{% endblock %}
+{% block body %}
+class TransformCopy: public Animation
+{
+	public:
+		TransformCopy(mobject::SS_Mobject, mobject::SS_Mobject);
+
+		mobject::SS_Mobject	_M_src;
+		mobject::SS_Mobject	_M_dst;
+};
+{% endblock %}

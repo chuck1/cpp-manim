@@ -1,0 +1,15 @@
+{% extends "CHeader.hpp" %}
+{% block header %}
+#include <manim/decl.hpp>
+{% endblock %}
+{% block body %}
+class Mobject
+{
+	public:
+		virtual ~Mobject() = default;
+
+		virtual S_Mobject		submobject(unsigned int) = 0;
+		virtual std::vector<S_Mobject>	submobjects(unsigned int, unsigned int) = 0;
+		virtual unsigned int		submobject_size() = 0;
+};
+{% endblock %}

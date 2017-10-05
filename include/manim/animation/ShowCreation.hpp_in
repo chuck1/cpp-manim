@@ -1,0 +1,15 @@
+{% extends "CHeader.hpp" %}
+{% block header %}
+#include <manim/decl.hpp>
+#include <manim/animation/Animation.hpp> // esolv/anim/animation/Animation.hpp_in
+{% endblock %}
+{% block body %}
+class ShowCreation: public Animation
+{
+	public:
+		ShowCreation(mobject::SS_Mobject, float run_time = 1);
+
+		mobject::SS_Mobject	_M_obj;
+		float			_M_run_time;
+};
+{% endblock %}

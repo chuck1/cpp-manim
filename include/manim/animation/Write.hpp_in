@@ -1,0 +1,12 @@
+{% extends "CHeader.hpp" %}
+{% block header %}
+#include <manim/decl.hpp>
+#include <manim/animation/ShowCreation.hpp> // esolv/anim/animation/Animation.hpp_in
+{% endblock %}
+{% block body %}
+class Write: virtual public ShowCreation
+{
+	public:
+		Write(mobject::SS_Mobject, float run_time = 1);
+};
+{% endblock %}

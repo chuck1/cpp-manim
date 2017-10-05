@@ -1,0 +1,44 @@
+{{ include_block_open }}
+
+#include <algorithm>
+#include <map>
+#include <memory>
+#include <vector>
+#include <exception>
+#include <iostream>
+#include <deque>
+
+#include <manim/decl.hpp> // esolv/decl.hpp_in
+
+{{ namespace_open }}
+
+class _Factory: 
+	virtual public std::enable_shared_from_this<_Factory>
+{
+public:
+
+	virtual bool						is_python() const;
+	virtual manim::animation::S_Transform		new_anim_transform(
+			manim::mobject::SS_Mobject,
+			manim::mobject::SS_Mobject) const;
+	virtual manim::animation::S_TransformCopy		new_anim_transform_copy(
+			manim::mobject::SS_Mobject,
+			manim::mobject::SS_Mobject) const;
+	virtual manim::animation::S_Write			new_anim_write(
+			manim::mobject::SS_Mobject) const;
+	virtual manim::animation::S_Uncreate		new_anim_uncreate(
+			manim::mobject::SS_Mobject,
+			float run_time) const;
+	virtual manim::mobject::S_TexMobject		new_anim_texmobject(
+			std::vector<std::string>) const;
+	virtual manim::mobject::S_Mobject			new_anim_mobject(
+			std::vector<manim::mobject::S_Mobject>) const;
+
+};
+
+{{ namespace_close }}
+
+{{ include_block_close }}
+
+
+

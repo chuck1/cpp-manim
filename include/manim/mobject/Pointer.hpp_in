@@ -1,0 +1,27 @@
+{% extends "CHeader.hpp" %}
+{% block header %}
+#include <manim/decl.hpp>
+{% endblock %}
+{% block body %}
+class Pointer
+{
+	public:
+		typedef std::shared_ptr<manim::mobject::S_Mobject> PTR;
+
+		Pointer();
+		
+		void					load(manim::mobject::S_Mobject);
+
+		manim::mobject::S_Mobject		object();
+		manim::mobject::S_Mobject		object() const;
+		
+		void					start(unsigned int i);
+		void					end(unsigned int i);
+		void					set(unsigned int i);
+		void					set(unsigned int s, unsigned int e);
+
+		PTR					_M_ptr;
+		unsigned int *				_M_s;
+		unsigned int *				_M_e;
+};
+{% endblock %}
