@@ -4,7 +4,7 @@ pdf_files = $(patsubst build/dot/%.dot,build/dot/pdf/%.pdf,$(dot_files))
 png_files = $(patsubst build/dot/%.dot,build/dot/png/%.png,$(dot_files))
 
 all:
-	pbs2 make config.py
+	pbs make config.py
 
 build/dot/pdf/%.pdf: build/dot/%.dot
 	@mkdir -p $(dir $@)
@@ -23,7 +23,7 @@ dotclean:
 
 .PHONY: doc
 doc:
-	pbs2 make config.py doc
+	pbs make config.py doc
 
 clean:
 	rm -rf build/object/*

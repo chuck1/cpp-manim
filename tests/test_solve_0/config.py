@@ -1,6 +1,6 @@
-import pbs2
+import pbs
 
-e = pbs2.Executable(self, 'test_solve_0', __file__)
+e = pbs.Executable(self, 'test_solve_0', __file__)
 
 #e.l_defines.append('ESOLV_RESOLVER_BASE_HPP_IN_LOGGER_COMPILE_MODE=logs::mode::COMPILE_TIME')
 #e.l_defines.append('ESOLV_RESOLVER_BASE_HPP_IN_LOGGER_COMPILE_LEVEL=1')
