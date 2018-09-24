@@ -3,7 +3,7 @@ import pbs
 
 l = pbs.Library(self, 'manim', __file__)
 
-l.doc_out_dir = "/media/sf_P_DRIVE/html/manim"
+l.doc_out_dir = "/home/charles/WindowsShare/html/manim"
 
 self.parts.append(l)
 
